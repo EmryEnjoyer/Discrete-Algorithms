@@ -3,14 +3,14 @@ import random
 # Find a better prime generation
 
 def generatePrime():
-    startingInt = random.randint(2**32, 2**48)
-    startingInt = startingInt * 2 + 1
+    startingInt = random.randint(2**32, 2**64)
+
 
     print("Generating the next prime after", startingInt, "...")
     while not primeTest(startingInt):
-        startingInt += 1
+        startingInt = startingInt * 6 + 1
         if ((str(startingInt))[-1] == '5'):
-            startingInt += 1
+            startingInt += 2
     print("The prime that we chose is", startingInt, "\n")
     return startingInt
 

@@ -1,4 +1,4 @@
-import PrimeGenerator
+import betterPrimeGeneration
 
 def fastExponentiation(base, exponent, mod):
     if(mod == 1):
@@ -82,9 +82,9 @@ def findBlockSize(n):
 
 
 
-p = PrimeGenerator.generatePrime();
-q = PrimeGenerator.generatePrime();
-pwr = PrimeGenerator.generateCoPrime((p-1) * (q-1));
+p = betterPrimeGeneration.generatePrime(1024);
+q = betterPrimeGeneration.generatePrime(1024);
+pwr = betterPrimeGeneration.generateCoPrime((p-1) * (q-1));
 r = findInverse(pwr, (p-1)*(q-1))
 
 message = input("Input your secret message: ")
